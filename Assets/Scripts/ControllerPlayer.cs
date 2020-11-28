@@ -17,6 +17,7 @@ public class ControllerPlayer : MonoBehaviour
     public AudioClip audioDie;
     public AudioClip audioGol;
     public Animator canvasAnimation;
+    public CameraController camera;
 
     public float forceValue;
     public float jumpValue;
@@ -36,23 +37,25 @@ public class ControllerPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_isInGoal)
+        if (camera.isAnimationEnd() && !_isInGoal)
         {
+            GameStatusManager.timePlayed += Time.deltaTime;
+
             if (Input.GetButtonDown("Jump") && _isGrounded)
             {
-                jump();
+                kick();
             }
 
             if (Input.acceleration.z > 0.1 && _isGrounded)
             {
-                jump();
+                kick();
             }
 
             if (Input.touchCount == 1)
             {
                 if (Input.touches[0].phase == TouchPhase.Began && _isGrounded)
                 {
-                    jump();
+                    kick();
                 }
             }
 
@@ -173,14 +176,16 @@ public class ControllerPlayer : MonoBehaviour
         _rb.angularVelocity = Vector3.zero; 
         transform.localPosition = restartPosition;
         transform.rotation = Quaternion.identity;
+        GameStatusManager.deaths++;
     }
 
-    private void jump()
+    private void kick()
     {
         _rb.AddForce(Vector3.up * jumpValue, ForceMode.Impulse);
         _audioSource.clip = audioJump;
         _audioSource.Play();
         _isGrounded = false;
+        GameStatusManager.kicks++;
     }
 
     private void FixedUpdate()

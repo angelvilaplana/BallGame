@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 416909173759274068}
   - component: {fileID: 416909173759274067}
   - component: {fileID: 416909173759274066}
-  - component: {fileID: 416909173759274069}
   - component: {fileID: 416909173759274070}
+  - component: {fileID: 2546640625133446367}
   - component: {fileID: 416909173759274071}
   m_Layer: 0
   m_Name: Main Camera
@@ -86,19 +86,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416909173759274065}
   m_Enabled: 1
---- !u!114 &416909173759274069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416909173759274065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b3f8e591309949d78a7ebc2a8d79533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 416909174072995805}
 --- !u!82 &416909173759274070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -113,7 +100,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -195,6 +182,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2546640625133446367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416909173759274065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3f8e591309949d78a7ebc2a8d79533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 416909174072995805}
 --- !u!95 &416909173759274071
 Animator:
   serializedVersion: 3
@@ -445,6 +445,7 @@ MonoBehaviour:
   audioDie: {fileID: 8300000, guid: 719ae77848fa346f1bbaf7c30a926ec9, type: 3}
   audioGol: {fileID: 8300000, guid: 05835882f2d3a48839b733444aadda25, type: 3}
   canvasAnimation: {fileID: 0}
+  camera: {fileID: 2546640625133446367}
   forceValue: 20
   jumpValue: 12
 --- !u!1 &5302396900069546508

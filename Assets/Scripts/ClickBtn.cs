@@ -23,6 +23,9 @@ public class ClickBtn : MonoBehaviour
     public void startGame()
     {
         _audioSource.Play();
+        GameStatusManager.deaths = 0;
+        GameStatusManager.kicks = 0;
+        GameStatusManager.timePlayed = 0;
         SceneManager.LoadScene("Level1");
     }
     
