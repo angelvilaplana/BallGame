@@ -23,8 +23,8 @@ public class GameStatusController : MonoBehaviour
         float seconds = Mathf.FloorToInt(GameStatusManager.timePlayed % 60);
         
         timePlayed.text = "Time Played: " + $"{minutes:00}:{seconds:00}";
-        kicks.SetText("Kicks: " + GameStatusManager.kicks);
         deaths.SetText("Deaths: " + GameStatusManager.deaths);
+        kicks.SetText("Kicks: " + GameStatusManager.kicks);
     }
 
 }
