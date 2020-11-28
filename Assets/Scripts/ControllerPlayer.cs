@@ -40,26 +40,19 @@ public class ControllerPlayer : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && _isGrounded)
             {
-                _rb.AddForce(Vector3.up * jumpValue, ForceMode.Impulse);
-                _audioSource.clip = audioJump;
-                _audioSource.Play();
-                _isGrounded = false;
+                jump();
             }
 
             if (Input.acceleration.z > 0.1 && _isGrounded)
             {
-                _rb.AddForce(Vector3.up * jumpValue, ForceMode.Impulse);
-                _audioSource.Play();
-                _isGrounded = false;
+                jump();
             }
 
             if (Input.touchCount == 1)
             {
                 if (Input.touches[0].phase == TouchPhase.Began && _isGrounded)
                 {
-                    _rb.AddForce(Vector3.up * jumpValue, ForceMode.Impulse);
-                    _audioSource.Play();
-                    _isGrounded = false;
+                    jump();
                 }
             }
 
@@ -146,10 +139,16 @@ public class ControllerPlayer : MonoBehaviour
     private IEnumerator changeScene()
     {
         yield return new WaitForSeconds(1);
-        Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Level1")
+        var scene = SceneManager.GetActiveScene();
+        var numNextLevel = Convert.ToInt32(scene.name.Substring(5)) + 1;
+        var nextLevel = "Level" + numNextLevel;
+        if (Application.CanStreamedLevelBeLoaded(nextLevel))
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene(nextLevel);
+        }
+        else
+        {
+            SceneManager.LoadScene("EndGame");
         }
     }
 
@@ -174,6 +173,14 @@ public class ControllerPlayer : MonoBehaviour
         _rb.angularVelocity = Vector3.zero; 
         transform.localPosition = restartPosition;
         transform.rotation = Quaternion.identity;
+    }
+
+    private void jump()
+    {
+        _rb.AddForce(Vector3.up * jumpValue, ForceMode.Impulse);
+        _audioSource.clip = audioJump;
+        _audioSource.Play();
+        _isGrounded = false;
     }
 
     private void FixedUpdate()

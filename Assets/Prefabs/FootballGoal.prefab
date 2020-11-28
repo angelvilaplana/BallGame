@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 22647227714738365}
   - component: {fileID: 1698385001800080756}
   m_Layer: 0
-  m_Name: FootballGoal 1
+  m_Name: FootballGoal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,8 +370,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 460.4781, y: 152.95818, z: 52.056023}
-  m_Center: {x: 20.180597, y: 15.8293295, z: -64.17795}
+  m_Size: {x: 444.0184, y: 183.60391, z: 22.103893}
+  m_Center: {x: -16.176723, y: 0.50610703, z: -49.201847}
 --- !u!1 &5972294690949506690
 GameObject:
   m_ObjectHideFlags: 0

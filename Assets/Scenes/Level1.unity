@@ -2503,5 +2503,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5846396020940681626, guid: 642dbd00fe25048a7a2db85a61900993, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846396021866021216, guid: 642dbd00fe25048a7a2db85a61900993, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846396021866021216, guid: 642dbd00fe25048a7a2db85a61900993, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846396021866021216, guid: 642dbd00fe25048a7a2db85a61900993, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 642dbd00fe25048a7a2db85a61900993, type: 3}
