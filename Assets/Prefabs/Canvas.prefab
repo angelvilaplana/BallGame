@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8409384204688368222}
   - component: {fileID: 4046216106906304988}
   - component: {fileID: 6768872326516911541}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TimePlayed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8921653135700944501}
   - component: {fileID: 3314877036375570053}
   - component: {fileID: 8667881908268746265}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kicks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 8462482061829812859}
   - component: {fileID: 7568356376051120038}
   - component: {fileID: 261687285119820246}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Deaths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9188970967395092030}
   - component: {fileID: 2052875672990238074}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ RectTransform:
   - {fileID: 8462482061829812859}
   - {fileID: 8921653135700944501}
   m_Father: {fileID: 5846396020474181837}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -487,8 +487,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 9188970967395092030}
   - {fileID: 5846396020940681629}
+  - {fileID: 9188970967395092030}
   - {fileID: 5846396022185656047}
   - {fileID: 5846396021866021219}
   m_Father: {fileID: 0}
@@ -508,7 +508,7 @@ Canvas:
   m_GameObject: {fileID: 5846396020474182449}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -518,7 +518,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &5846396020474181839
 MonoBehaviour:
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -603,12 +603,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5846396020940681628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 5846396020474181837}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -645,8 +645,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GOL!!!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 577b561723bf34b6888c6c23a7835010, type: 2}
+  m_sharedMaterial: {fileID: 3773140403524776880, guid: 577b561723bf34b6888c6c23a7835010, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
